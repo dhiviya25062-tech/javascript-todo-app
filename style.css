@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 650px;
+}
+
+.todo-app {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #777;
+    margin-bottom: 25px;
+}
+
+.task-input {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.task-input input {
+    flex: 1;
+    padding: 13px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.task-input input:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+#addTaskBtn {
+    background: #667eea;
+    color: white;
+    padding: 13px 18px;
+}
+
+#addTaskBtn:hover {
+    background: #5568d9;
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filter-btn {
+    padding: 9px 15px;
+    background: #eee;
+    color: #333;
+}
+
+.filter-btn.active {
+    background: #667eea;
+    color: white;
+}
+
+#taskList {
+    list-style: none;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px;
+    margin-bottom: 10px;
+    background: #f5f5f5;
+    border-radius: 8px;
+}
+
+.task-text {
+    flex: 1;
+    word-break: break-word;
+}
+
+.task.completed .task-text {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.task button {
+    padding: 7px 10px;
+}
+
+.complete-btn {
+    background: #28a745;
+    color: white;
+}
+
+.edit-btn {
+    background: #ffc107;
+    color: #222;
+}
+
+.delete-btn {
+    background: #dc3545;
+    color: white;
+}
+
+#taskCount {
+    text-align: center;
+    margin-top: 20px;
+    color: #666;
+}
+
+@media (max-width: 600px) {
+
+    .todo-app {
+        padding: 20px;
+    }
+
+    .task-input {
+        flex-direction: column;
+    }
+
+    #addTaskBtn {
+        width: 100%;
+    }
+
+    .filters {
+        flex-wrap: wrap;
+    }
+
+    .task {
+        flex-wrap: wrap;
+    }
+}
